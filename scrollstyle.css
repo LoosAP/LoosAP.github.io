@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+}
+
+.scroll-bg{
+    background:#0b0b72;
+    width: 400px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.scroll-div{
+    width: 400px;
+    background: rgb(11, 11, 114);
+    height: 300px;  
+    overflow: hidden;
+    overflow-y: scroll ;
+}
+
+.scroll-object{
+    color: wheat;
+    font-family: cursive;
+    font-size: 15px;
+    padding: 20px;
+}
+
