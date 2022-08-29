@@ -1,0 +1,52 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+}
+
+.iconz {
+  height: 32px;
+  width: 32px;
+  image-resolution: from-image;
+}
+.win_back {
+  padding: 10px;
+  height: 45px;
+  width: 35px;
+  background-color: darkcyan;
+  border-color: black;
+
+  margin: 5px;
+}
+
+.windows_move {
+  position: absolute;
+  left: 400px;
+  top: 75px;
+  width: 904px;
+}
+
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: #3e016c;
+}
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:active {
+  text-decoration: none;
+}
+
+#mydiv {
+  position: absolute;
+}
