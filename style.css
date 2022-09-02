@@ -28,7 +28,8 @@ body {
   position: absolute;
   left: 400px;
   top: 75px;
-  width: 904px;
+  width: 100vw;
+  height: 100vh;
 }
 
 a:link {
