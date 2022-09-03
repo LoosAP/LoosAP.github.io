@@ -58,7 +58,7 @@ function nextTick() {
     drawBall(ballX, ballY);
     checkCollision();
     nextTick();
-  }, 2);
+  }, 10);
 }
 function clearBoard() {
   ctx.fillStyle = boardBackground;
@@ -133,7 +133,7 @@ function checkCollision() {
     if (ballY > paddle2.y && ballY < paddle2.y + paddle2.height) {
       ballX = paddle2.x - ballRadius;
       ballXDirection *= -1;
-      ballSpeed += 0.2;
+      ballSpeed += 0.05;
     }
   }
 }
