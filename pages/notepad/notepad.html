@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notepad.css">
+    <script src="notepad.js" defer></script>
+    <title>Notepad</title>
+</head>
+
+<body>
+    <h1>Notepad</h1>
+    <div class="center">
+
+        <div class="tools">
+            <select class="fontfamily" id="" onchange="changeFontFamily(this)">
+
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Trebuchet">Trebuchet</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Brush Script MT">Brush Script MT</option>
+            </select>
+            <select class="fontsize" id="" onchange="changeFontSize(this)">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+                <option value="28">28</option>
+                <option value="32">32</option>
+                <option value="36">36</option>
+                <option value="40">40</option>
+                <option value="44">44</option>
+                <option value="48">48</option>
+                <option value="52">52</option>
+                <option value="56">56</option>
+            </select>
+
+            <input type="button" value="Bold" class="upper" onclick="Bold()">
+            <input type="button" value="Italic" class="upper" onclick="Italic()">
+            <input type="button" value="Underline" class="upper" onclick="Underline()">
+
+        </div>
+        <br>
+        <textarea name="textarea" placeholder="Start typing here!" id="content" cols="100" rows="20"></textarea>
+        <br>
+        <input type="reset" value="Clear" class="upper" onclick="clearContent()">
+        <input type="button" value="Reset" class="upper" onclick="reset()">
+        <input type="button" value="Export" class="upper" onclick=saveTextAsFile(content.value,"download.txt")>
+
+    </div>
+</body>
+
+</html>
