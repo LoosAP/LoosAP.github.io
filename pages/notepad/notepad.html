@@ -18,7 +18,7 @@
     <div class="center">
 
         <div class="tools">
-            <select class="fontfamily" id="" onchange="changeFontFamily(this)">
+            <select class="fontfamily" id="fontFamily" onchange="changeFontFamily(this)">
 
                 <option value="Arial">Arial</option>
                 <option value="Verdana">Verdana</option>
@@ -30,7 +30,7 @@
                 <option value="Courier New">Courier New</option>
                 <option value="Brush Script MT">Brush Script MT</option>
             </select>
-            <select class="fontsize" id="" onchange="changeFontSize(this)">
+            <select class="fontsize" id="fontSize" onchange="changeFontSize(this)">
                 <option value="8">8</option>
                 <option value="9">9</option>
                 <option value="10">10</option>
@@ -57,11 +57,22 @@
 
         </div>
         <br>
-        <textarea name="textarea" placeholder="Start typing here!" id="content" cols="100" rows="20"></textarea>
+        <textarea name="textarea" placeholder="Start typing here!" spellcheck="false" id="content" cols="100"
+            rows="20"></textarea>
         <br>
         <input type="reset" value="Clear" class="upper" onclick="clearContent()">
         <input type="button" value="Reset" class="upper" onclick="reset()">
-        <input type="button" value="Export" class="upper" onclick=saveTextAsFile(content.value,"download.txt")>
+        <input type="button" value="Export" class="upper"
+            onclick=saveTextAsFile(content.value,exportName.value+exportFormat.value)>
+        <input type="text" class="fontsize" id="exportName" placeholder="download">
+        <select name="exportAs" id="exportFormat" class="fontsize">
+            <option value=".txt">.txt</option>
+            <option value=".html">.html</option>
+            <option value=".css">.css</option>
+            <option value=".js">.js</option>
+            <option value=".json">.json</option>
+
+        </select>
 
     </div>
 </body>

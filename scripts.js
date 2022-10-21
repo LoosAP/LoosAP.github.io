@@ -1,3 +1,5 @@
+alert("press F11 for the best experience");
+alert("also the Internet window is draggable");
 dragElement(document.getElementById("mydiv"));
 
 function dragElement(elmnt) {

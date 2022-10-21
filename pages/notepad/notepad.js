@@ -1,7 +1,9 @@
 const text = document.getElementById("content");
+const textFontFamily = document.getElementById("fontFamily");
 
 function changeFontFamily(font) {
   text.style.fontFamily = font.value;
+  textFontFamily.style.fontFamily = font.value;
 }
 function changeFontSize(font) {
   text.style.fontSize = font.value + "px";

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: aliceblue;
+  background-color: goldenrod;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -11,6 +11,11 @@ h1 {
 .tools {
   margin-left: 10px;
 }
+select {
+  background-color: lightgoldenrodyellow;
+  font-size: 16px;
+}
+
 .fontfamily,
 .fontsize {
   margin: 10px 0;
@@ -23,30 +28,30 @@ h1 {
 .upper {
   margin: 10px 0;
   padding: 8px;
-  width: 10%;
+  width: 15%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: aquamarine;
+  background-color: #e8d60c;
   margin-left: 10px;
   color: black;
-  border: ridge;
   border-radius: 2px;
   cursor: pointer;
   font-size: 14px;
   transition: 1s;
 }
 .upper:hover {
-  width: 15%;
+  width: 25%;
   transition: 1s;
 }
 textarea {
+  background-color: lightgoldenrodyellow;
   width: 650px;
   height: 350px;
+  resize: none;
 }
 
 .center {
   margin: auto;
   width: 75%;
-
   padding: 10px;
 }
