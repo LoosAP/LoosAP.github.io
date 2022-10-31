@@ -1,5 +1,5 @@
-alert("press F11 for the best experience");
-alert("also the Internet window is draggable");
+/*alert("press F11 for the best experience");
+alert("also the Internet window is draggable");*/
 dragElement(document.getElementById("mydiv"));
 
 function dragElement(elmnt) {
@@ -38,6 +38,39 @@ function dragElement(elmnt) {
   }
 }
 
+const clockTime = document.getElementById("time");
+const clockDate = document.getElementById("date");
+updateClock();
+setInterval(updateClock, 1000);
+function updateClock() {
+  let date = new Date();
+  clockTime.innerHTML = formatTime();
+  clockDate.innerHTML = formatDate();
+  function formatTime() {
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    minutes = doubleZeroes(minutes);
+    return `${hours}:${minutes}`;
+  }
+
+  function formatDate() {
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDay();
+
+    month = doubleZeroes(month);
+    day = doubleZeroes(day);
+
+    return `${year}.${month}.${day}.`;
+  }
+
+  function doubleZeroes(num) {
+    num = num.toString();
+    return num.length < 2 ? "0" + num : num;
+  }
+}
+
+/*
 const maximizeButton = document.querySelector("#maximizeButton");
 const moveWindow = document.querySelector("#mydiv");
 
@@ -59,3 +92,21 @@ function windowMaximize() {
     moveWindow.style.height = height;
   }
 }
+*/
+/*
+function updateClock()
+{
+  var dateTime = new Date();
+  
+  var clockElement = getElement("clock");
+  
+  var hours = dateTime.getHours();
+  var minutes = dateTime.getMinutes();
+  
+  hours = ((hours < 10) ? "0" : "") + hours;
+  minutes = ((minutes < 10) ? "0" : "") + minutes;
+  
+  clockElement.innerHTML = hours + ":" + minutes;
+  setTimeout('updateClock()', 1000);
+}
+*/
