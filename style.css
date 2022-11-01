@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Win98;
+  src: url(fonts/WindowsRegular.ttf);
+}
+
+* {
+  font-family: "Ms Sans Serif";
+}
 html,
 body {
   margin: 0;
@@ -47,23 +55,35 @@ a:active {
 .table {
   display: flex;
   position: fixed;
+  align-items: center;
+  justify-content: space-between;
   bottom: 0px;
   background-color: silver;
   height: 35px;
   width: 100%;
 }
 .clock {
+  display: flex;
   flex-direction: column;
-}
-
-#time {
-  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
 }
 
 #start {
-  float: left;
-  margin: 6px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  height: 28px;
 }
+#start > img {
+  height: 22px;
+}
+#start > strong {
+  font-style: bold;
+  font-size: medium;
+  padding-left: 2px;
+}
+
 #ieicon {
   float: left;
   width: 13px;

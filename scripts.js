@@ -1,5 +1,5 @@
-/*alert("press F11 for the best experience");
-alert("also the Internet window is draggable");*/
+alert("press F11 for the best experience");
+alert("also the Internet window is draggable");
 dragElement(document.getElementById("mydiv"));
 
 function dragElement(elmnt) {
@@ -39,31 +39,35 @@ function dragElement(elmnt) {
 }
 
 const clockTime = document.getElementById("time");
-const clockDate = document.getElementById("date");
+// const clockDate = document.getElementById("date");
 updateClock();
 setInterval(updateClock, 1000);
 function updateClock() {
   let date = new Date();
   clockTime.innerHTML = formatTime();
-  clockDate.innerHTML = formatDate();
+  //  clockDate.innerHTML = formatDate();
   function formatTime() {
     let hours = date.getHours();
     let minutes = date.getMinutes();
+    let amPm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12;
+
     minutes = doubleZeroes(minutes);
-    return `${hours}:${minutes}`;
+
+    return `${hours}:${minutes} ${amPm}`;
   }
 
-  function formatDate() {
+  /* function formatDate() {
     let year = date.getFullYear();
-    let month = date.getMonth();
-    let day = date.getDay();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
 
     month = doubleZeroes(month);
     day = doubleZeroes(day);
 
     return `${year}.${month}.${day}.`;
   }
-
+*/
   function doubleZeroes(num) {
     num = num.toString();
     return num.length < 2 ? "0" + num : num;
