@@ -56,11 +56,15 @@ a:active {
   display: flex;
   position: fixed;
   align-items: center;
-  justify-content: space-between;
+
   bottom: 0px;
   background-color: silver;
   height: 35px;
   width: 100%;
+}
+.settings {
+  margin-left: auto;
+  margin-right: 20px;
 }
 .clock {
   display: flex;
@@ -82,6 +86,24 @@ a:active {
   font-style: bold;
   font-size: medium;
   padding-left: 2px;
+}
+
+.tableapp {
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  width: 200px;
+}
+
+.tableapp > img {
+  height: 18px;
+}
+
+.tableapp > strong {
+  font-size: medium;
+
+  padding-left: 6px;
 }
 
 #ieicon {

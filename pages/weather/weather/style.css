@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Win98;
+  src: url(../../../fonts/WindowsRegular.ttf);
+}
+body {
+  background-color: aqua;
+}
+*::after *::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: hsl(200, 100%, 85%);
+  color: hsl(200, 100%, 10%);
+  font-family: "Win98";
+}
