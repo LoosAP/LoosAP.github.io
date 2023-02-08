@@ -56,12 +56,12 @@ a:active {
   display: flex;
   position: fixed;
   align-items: center;
-
   bottom: 0px;
   background-color: silver;
   height: 35px;
   width: 100%;
 }
+
 .settings {
   margin-left: auto;
   margin-right: 20px;
@@ -101,8 +101,8 @@ a:active {
 }
 
 .tableapp > strong {
+  font-weight: 500;
   font-size: medium;
-
   padding-left: 6px;
 }
 
